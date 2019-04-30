@@ -19,3 +19,6 @@ Auth::routes();
 
 Route::get('/report', 'ReportController@index')
     ->middleware('auth');
+
+Route::get('/excel', 'ReportController@excel')
+    ->middleware('auth');

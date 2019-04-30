@@ -1,7 +1,9 @@
 <?php
     namespace App\Http\Controllers;
 
-    use Illuminate\Http\Request;
+    use App\Exports\ExcelExport;
+    use Maatwebsite\Excel\Facades\Excel;
+    use Illuminate\Support\Facades\Auth;
 
     class ReportController extends Controller {
 
@@ -21,6 +23,15 @@
          */
         public function index () {
             return view('report');
+        }
+
+        /**
+         * Downloads excel report
+         *
+         * @return \Symfony\Component\HttpFoundation\BinaryFileResponse
+         */
+        public function excel () {
+            return Excel::download(new ExcelExport(), Auth::User()->name . ' report.xlsx');
         }
     }
 ?>

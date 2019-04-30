@@ -3,33 +3,37 @@
 @section('content')
     <div class="h-75 row align-items-center text-center">
         <div class="col">
-            <h1>Hej <strong>{{ Auth::user()->name }}</strong>, Velkommen til report siden</h1>
-            <article>Du kan downloade din report ved at trykke på download knappen nedenunder</article>
+            <h1 id="over">Hej <strong>{{ Auth::user()->name }}</strong>, Velkommen til report siden</h1>
+            <article>Du kan download din report ved at trykke på download knappen</article>
             <hr>
-            <button class="mt-5" id="report-button">Download report</button>
+            <a href="/excel" target="_blank" class="mt-5" id="download-button">Download report</a>
         </div>
     </div>
 @endsection
 
 <style>
-    #report-button {
+    #download-button {
         background: #2fa360;
         display:inline-block;
         cursor:pointer;
         color:#ffffff;
-        font-family:Georgia;
         font-size:18px;
         padding:10px 44px;
 
         border: none;
     }
-    #report-button:hover {
+
+    #download-button:hover {
         background: #1d643b;
     }
 
+    #over {
+        font-size: 45px;
+    }
+
     article {
-        color: #c6c8ca;
-        font-size: 16px;
+        color: #adb5bd;
+        font-size: 17px;
         font-weight: bold;
     }
 </style>
