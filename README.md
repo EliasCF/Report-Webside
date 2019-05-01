@@ -1,13 +1,13 @@
 # Report-Webside
----
+
 This project is made to enable the user to do two things: Use the authentication system (Register and Log in) and to download a dynamicly generated excel file, once logged in.
 
 ## Getting Started
----
+
 The instructions in this README will get you a copy of the project up and running on your local machine for development and testing.
 
-### Prerequisites   
----
+## Prerequisites   
+
 This is a list of software you will need to have installed, before you can get the project up and running on your local machine.
 
 * [PHP](https://www.php.net/downloads.php)
@@ -15,8 +15,8 @@ Apart from the installation of PHP itself, you will also need to enable two PHP 
 * [MySql](https://dev.mysql.com/downloads/)
 * [Composer](https://getcomposer.org/download/)
 
-### Installing
----
+## Installing
+
 This is a step by step guide on how to get the project ready to run on localhost.
 
 First you will have to download the project. You can use git for this by using the following command.
@@ -53,8 +53,8 @@ php artisan migrate
 
 And that's it, if all went well, you are ready to run.
 
-### Running on localhost
----
+## Running on localhost
+
 Running the project simply requires one command.
 
 ```
