@@ -14,12 +14,13 @@
 <style>
     #download-button {
         background: #2fa360;
-        display:inline-block;
-        cursor:pointer;
         color:#ffffff;
-        font-size:18px;
-        padding:10px 44px;
 
+        cursor:pointer;
+        font-size:18px;
+
+        display:inline-block;
+        padding:10px 45px;
         border: none;
     }
 

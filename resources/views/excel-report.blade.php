@@ -42,7 +42,7 @@
                 <td>{{random_date_in_range('2019-01-01', '2019-12-31')}}</td>
                 <td>{{random_date_in_range('2019-01-01', '2019-12-31')}}</td>
                 <td>{{random_date_in_range('2019-01-01', '2019-12-31')}}</td>
-                @if (in_array($row_number, range(1, 2)))
+                @if (in_array($row_number, [1, 2]))
                     <td style="background-color: #d0211c;"> </td>
                     <td>{{random_date_in_range('2018-01-01', '2018-12-31')}}
                 @endif
