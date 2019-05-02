@@ -58,8 +58,28 @@
                 text-transform: uppercase;
             }
 
-            .m-b-md {
-                margin-bottom: 30px;
+            #register-button {
+                background: #ff9900;
+                color: #ffffff;
+
+                cursor: pointer;
+                font-size: 18px;
+                text-decoration: none;
+                font-weight: bold;
+
+                display: inline-block;
+                padding: 10px 45px;
+                border: none;
+            }
+
+            #register-button:hover {
+                background: #995c00;
+            }
+
+            h3 {
+                margin: 0px;
+                float: left;
+                color: #adb5bd;
             }
         </style>
     </head>
@@ -80,19 +100,15 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="title mb-5">
+                    Report-Webside
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                @auth
+                @else
+                    <h3>Registrer dig for at få adgang til reporten</h3>
+                    <a style="float: right;" href="{{ route('register') }}" id="register-button">Registrer</a>
+                @endauth
             </div>
         </div>
     </body>
